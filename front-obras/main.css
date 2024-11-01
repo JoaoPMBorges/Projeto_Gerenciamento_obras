@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    /*o que fica abaixo da barra*/
+    background: #060a2e;
+}
+
+html::-webkit-scrollbar-thumb {
+    /*cor da barra*/
+    background: rgb(5, 238, 21);
+}
+
+body {
+    background: #060a2e;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+/*Cabeçalho das sessões*/
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: .1rem;
+    width: 100%;
+    background: #aaa;
+    z-index: -1;
+}
+
+.heading span {
+    font-size: 3rem;
+    color: rgb(5, 238, 21);
+    background: #060a2e;
+    padding: .5rem 1.5rem;
+    border: 0.1rem solid #aaa;
+    border-radius: .5rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    padding-right: 3rem;
+    background: linear-gradient(130deg, rgb(5, 238, 21) 93%,
+            transparent 90%);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    z-index: 10000;
+    background: #060a2e;
+}
+
+.header .logo {
+    font-weight: bolder;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.header .logo span {
+    color: rgb(5, 238, 21);
+}
+
+.header .navbar a {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    background: rgb(5, 238, 21);
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.inicio {
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.inicio .slide {
+    min-height: 90vh;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+}
+
+.inicio .slide .content {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 60rem;
+}
+
+.inicio .slide .content span {
+    font-size: 2rem;
+    color: rgb(5, 238, 21);
+    display: block;
+}
+
+.inicio .slide .content h3 {
+    font-size: 3rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+/*class de swipwer para criar as bolinhas*/
+.swiper-pagination-bullet {
+    height: 2rem;
+    width: 2rem;
+    background: #fff;
+    border-radius: 0;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: rgb(5, 238, 21);
+}
+
+.inicio{
+    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8));
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.sobre .image {
+    flex: 1 1 42rem;
+    position: relative;
+}
+
+.sobre .image::before,
+.sobre .image::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: rgb(5, 238, 21);
+    height: 15rem;
+    width: 15rem;
+}
+
+.sobre .image::before {
+    top: 0;
+    left: 0;
+}
+
+.sobre .image::after {
+    bottom: 0;
+    right: 0;
+}
+
+.sobre .image img {
+    width: 100%;
+    padding: 2rem;
+}
+
+.sobre .content {
+    flex: 1 1 42rem;
+}
+
+.sobre .content span {
+    font-size: 2rem;
+    color: rgb(5, 238, 21);
+}
+
+.sobre .content .title {
+    font-size: 4rem;
+    color: #fff;
+    margin-top: .5rem;
+}
+
+.sobre .content p {
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.sobre .content .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.sobre .content .box-container .box {
+    flex: 1 1 20rem;
+}
+
+.sobre .content .box-container .box h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.sobre .content .box-container .box h3 i {
+    padding-right: 1.5rem;
+    color: rgb(5, 238, 21);
+}
+
+.area-acesso .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 1.5rem;
+}
+
+.area-acesso .box-container .box {
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.area-acesso .box-container .box:hover .content {
+    transform: translateY(0);
+}
+
+.area-acesso .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.area-acesso .box-container .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0c1457;
+    padding: 2rem;
+    transform: translateY(6.5rem);
+}
+
+.area-acesso .box-container .box .content span {
+    font-size: 1.5rem;
+    color: rgb(5, 238, 21);
+}
+
+.area-acesso .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: .5rem;
+}
+
+.area-acesso .box-container .box .content .share {
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+    border-top: 0.1rem solid #aaa;
+}
+
+.area-acesso .box-container .box .content .share a {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.area-acesso .box-container .box .content .share a:hover {
+    color: rgb(5, 238, 21);
+}
+
+.rodape .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.rodape .box-container .box h3 {
+    font-size: 2.2rem;
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+.rodape .box-container .box .links {
+    font-size: 1.5rem;
+    display: block;
+    color: #aaa;
+    padding: 1rem 3rem;
+}
+
+.rodape .box-container .box .links:hover {
+    color: rgb(5, 238, 21);
+}
+
+.rodape .box-container .box p {
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: 1rem 3rem;
+}
+
+.rodape .box-container .box p i {
+    padding-right: .5rem;
+    color: rgb(5, 238, 21);
+}
+
+.rodape .box-container .box .share {
+    padding: 1rem 3rem;
+}
+
+.rodape .box-container .box .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #060a2e;
+    border-radius: 50%;
+    margin-right: .5rem;
+    text-align: center;
+}
+
+.rodape .box-container .box .share a:hover {
+    background: rgb(5, 238, 21);
+}
+
+.rodape .box-container .box form {
+    margin-left: 2rem;
+}
+
+.rodape .box-container .box form .email {
+    margin-bottom: 1rem;
+    width: 100%;
+    background: #111;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: none;
+}
+
+/*Responsividade*/
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+        scroll-padding: 7rem;
+    }
+
+    .header {
+        padding: 0 2rem;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .inicio .slide {
+        padding: 2rem 5%;
+    }
+
+    .inicio .slide .content {
+        width: 50rem;
+    }
+
+    .inicio .slide .content h3 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #000;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .sobre {
+        gap: 3rem;
+    }
+
+    .sobre .image {
+        margin-top: 5rem;
+    }
+
+    .sobre .content .title {
+        font-size: 3rem;
+    }
+
+    .features .box-container .box.second {
+        flex-flow: column;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+/*
+
+    colocar no lugar 
+    */
+
+.box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.share {
+    background-color: #060a2e;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.share:hover {
+    background-color: #060a2e;
+}
+
+.share button {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
